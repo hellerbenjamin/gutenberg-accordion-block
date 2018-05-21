@@ -12,13 +12,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function gutenberg_boilerplate_block() {
 	wp_register_script(
-		'gutenberg-boilerplate-es5-step01',
+		'gutenberg-simple-accordion',
 		plugins_url( 'block/block.js', __FILE__ ),
 		array( 'wp-blocks', 'wp-element' )
 	);
 
-	register_block_type( 'gutenberg-boilerplate-es5/hello-world-step-01', array(
-		'editor_script' => 'gutenberg-boilerplate-es5-step01',
+	register_block_type( 'custom-blocks/gutenberg-simple-accordion', array(
+		'editor_script' => 'gutenberg-simple-accordion',
 	) );
 }
 add_action( 'init', 'gutenberg_boilerplate_block' );
